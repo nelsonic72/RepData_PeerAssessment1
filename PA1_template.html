@@ -166,7 +166,7 @@ activity$date &lt;- as.Date(activity$date, format=&quot;%Y-%m-%d&quot;) </code><
 </div>
 <div id="what-is-the-average-daily-activity-pattern" class="section level2">
 <h2>What is the average daily activity pattern?</h2>
-<p>We can make time series plot (i.e. type=“l”) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis) to help answer the question of the average daily activity pattern.</p>
+<p>We can make time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis) to help answer the question of the average daily activity pattern.</p>
 <pre class="r"><code>meanStepsPerInterval &lt;- aggregate(steps ~ interval, data=activity, rm.NA = TRUE, FUN = mean)
 plot(meanStepsPerInterval$interval, meanStepsPerInterval$steps, type = &quot;l&quot;,
      main = &quot;Means Steps Per Interval&quot;, xlab = &quot;Daily 5-Minute Interval&quot;, ylab=&quot;Mean Steps&quot;,
